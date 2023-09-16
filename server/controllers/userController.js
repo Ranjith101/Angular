@@ -3,7 +3,6 @@ const bcrypt = require('bcrypt');
 const pool = require('../database');
 const crypto = require('crypto')
 const nodemailer =require('nodemailer')
-// const {  sendVerificationEmail } = require('../verification');
 
 function sendVerificationEmail(userEmail, verificationToken) {
     const transporter = nodemailer.createTransport({

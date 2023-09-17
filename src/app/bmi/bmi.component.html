@@ -1,0 +1,17 @@
+<!-- bmi.component.html -->
+<div class="container">
+    <h2>Calculate BMI</h2>
+    <div class="form-group">
+      <label for="weight">Weight (kg):</label>
+      <input type="number" id="weight" [(ngModel)]="weight" (ngModelChange)="calculateBMI()" required>
+    </div>
+    <div class="form-group">
+      <label for="height">Height (cm):</label>
+      <input type="number" id="height" [(ngModel)]="height" (ngModelChange)="calculateBMI()" required>
+    </div>
+    <div class="form-group">
+      <label for="bmi">BMI:</label>
+      <input type="text" id="bmi" [(ngModel)]="bmi" readonly>
+    </div>
+  </div>
+  

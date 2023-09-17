@@ -13,13 +13,15 @@ import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { AuthComponent } from './auth/auth.component';
+import { BmiComponent } from './bmi/bmi.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    AuthComponent
+    AuthComponent,
+    BmiComponent
   ],
   imports: [
     BrowserModule,

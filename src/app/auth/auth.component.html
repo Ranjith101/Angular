@@ -1,13 +1,16 @@
 <div class="auth-container">
-    <div *ngIf="showLogin">
-      <!-- Login form goes here -->
-      <app-login></app-login>
-      <p>Don't have an account? <a (click)="toggleForm()">Register</a></p>
-    </div>
-    <div *ngIf="!showLogin">
-      <!-- Register form goes here -->
-      <app-register></app-register>
-      <p>Already have an account? <a (click)="toggleForm()">Login</a></p>
-    </div>
+  <div *ngIf="showLogin">
+    <!-- Login form goes here -->
+    <app-login (LoginSuccess)="onLoginSuccess()"></app-login>
+    <p>Don't have an account? <a (click)="toggleForm()">Register</a></p>
   </div>
-  
+  <div *ngIf="!showLogin">
+    <!-- Register form goes here -->
+    <app-register></app-register>
+    <p>Already have an account? <a (click)="toggleForm()">Login</a></p>
+  </div>
+  <div *ngIf="!showLogin">
+    <!-- BMI form goes here -->
+    <app-bmi *ngIf="!showLogin"></app-bmi>
+  </div>
+</div>
